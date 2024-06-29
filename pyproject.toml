@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "flora_finder"
+version = "0.1.0"
+description = ""
+authors = ["Liam Davey"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+httpx = "^0.27.0"
+fiona = "^1.9.6"
+shapely = "^2.0.4"
+click = "^8.1.7"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+
+pre-commit = "^3.7.1"
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+pickle-shp-file = "flora_finder.cli:pickle_shp_file"
+flora-finder = "flora_finder.cli:cli"
